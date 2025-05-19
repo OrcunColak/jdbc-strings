@@ -58,7 +58,7 @@ public class SqlServerUrlParser {
         // Default to 1433 if no port
         int port = hostPort.length > 1 ? Integer.parseInt(hostPort[1]) : 1433;
 
-        parsedValues.put(PORT_LITERAL, part);
+        parsedValues.put(PORT_LITERAL, String.valueOf(port));
     }
 
     private void parseKeyValue(String part) {
